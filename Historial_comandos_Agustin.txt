@@ -1,0 +1,58 @@
+cd
+mkdir repogit
+cd repogit
+git clone git@github.com:agustinpaezmoreno051-oss/TP_AYSO.git
+pwd
+cd TP_AYSO
+pwd
+ssh-keygen -t ed25519
+cat ~/.ssh/*.pub
+ssh-keygen -t ed25519
+cat ~/.ssh/*.pub
+cat ~/.ssh/id_ed25519.pub
+cd ~/repogit
+git clone git@github.com:agustinpaezmoreno051-oss/TP_AYSO.git
+cd ~/repogit/TP_AYSO
+cat /etc/os-release
+grep HOME_URL /etc/os-release
+grep -i home_url /etc/os-release
+grep -i home_url /etc/os-release > datos_url.txt
+ls
+cat datos_url.txt
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+cd ~/repogit/TP_AYSO
+git add .
+git config --global user.email "agustinpaezmoreno051@gmail.com"
+git config --global user.name "Agustin"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git push
+cat <<EOF >> README.md
+Alumno: Agustin
+Email: agustinpaezmoreno051@gmail.com
+EOF
+
+cat README.md
+git add README.md
+git commit -m "ADD: README con datos del alumno"
+git push
+cd ~/repogit/TP_AYSO
+mkdir -p estructura/correo estructura/clientes estructura/proveedores
+ls -R
+git add .
+git commit -m "ADD: estructura de carpetas"
+git push
+nano script_dir.sh
+chmod +x script_dir.sh
+./script_dir.sh
+git add .
+git commit -m "ADD: script de creación de estructura"
+git push
+cd ~/repogit/TP_AYSO
+history -a
